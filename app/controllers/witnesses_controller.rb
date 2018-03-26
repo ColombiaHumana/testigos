@@ -28,11 +28,9 @@ class WitnessesController < ApplicationController
 
     respond_to do |format|
       if @witness.save
-        format.html { redirect_to @witness, notice: 'Witness was successfully created.' }
-        format.json { render :show, status: :created, location: @witness }
+        format.html { redirect_to root, notice: 'Witness was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @witness.errors, status: :unprocessable_entity }
       end
     end
   end

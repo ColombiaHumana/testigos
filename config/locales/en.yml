@@ -1,0 +1,21 @@
+---
+en:
+  activerecord:
+    attributes:
+      witness:
+        doc_number: Número de CC
+        first_name: Primero Nombre
+        second_name: Segundo Nombre
+        surname: Primer Apellido
+        second_surname: Segundo Apellido
+        has_smartphone: Posee teléfono inteligente?
+        phone: Teléfono
+        department_id: Departamento
+        municipality_id: Municipio
+        foreing: En el extranjero?
+    create: Realizar donación
+    errors:
+      template:
+        header:
+          one: 1 error impide que la donación sea realizada
+          other: "%{count} errores impiden que la donación sea realizada"

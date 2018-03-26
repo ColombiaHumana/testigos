@@ -1,0 +1,40 @@
+// Place all the styles related to the Witnesses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin x-appearance ($value) {
+	-webkit-appearance: $value;
+	   -moz-appearance: $value;
+	        appearance: $value;
+}
+#amount_holder{
+  font-size: 24px;
+  text-align: center;
+}
+select{
+  @include x-appearance(none);
+}
+#declaracion h4{
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #622066;
+}
+#declaracion p{
+  font-size: 13px;
+  text-align: justify;
+}
+#declaracion label{
+  color: #622066;
+  font-weight: bold;
+}
+
+#declaracion, .card{
+  background-color: #f6f6f6;
+  border: 1px solid rgba(10, 10, 10, 0.25);
+}
+.card{
+  padding: 2rem;
+}
+
+#formulario textarea{
+  min-height: 100px;
+}

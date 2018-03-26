@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Doc number:</strong>
+  <%= @witness.doc_number %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @witness.first_name %>
+</p>
+
+<p>
+  <strong>Second name:</strong>
+  <%= @witness.second_name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @witness.surname %>
+</p>
+
+<p>
+  <strong>Second surname:</strong>
+  <%= @witness.second_surname %>
+</p>
+
+<p>
+  <strong>Has smartphone:</strong>
+  <%= @witness.has_smartphone %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @witness.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @witness.email %>
+</p>
+
+<p>
+  <strong>Foreing:</strong>
+  <%= @witness.foreing %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @witness.department %>
+</p>
+
+<p>
+  <strong>Municipality:</strong>
+  <%= @witness.municipality %>
+</p>
+
+<%= link_to 'Edit', edit_witness_path(@witness) %> |
+<%= link_to 'Back', witnesses_path %>

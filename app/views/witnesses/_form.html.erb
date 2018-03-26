@@ -1,0 +1,65 @@
+<div class="card" id="formulario">
+   <div class="card-section">
+    <%= form_with(model: witness, local: true) do |form| %>
+      <% if witness.errors.any? %>
+            <div class="callout alert">
+              <h5><%= t('.error') %></h5>
+
+              <ul>
+              <% witness.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.number_field :doc_number, id: :witness_doc_number %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :first_name, id: :witness_first_name %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :second_name, id: :witness_second_name %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :surname, id: :witness_surname %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :second_surname, id: :witness_second_surname %>
+      </div>
+
+      <div class="field">
+        <%= form.check_box :has_smartphone, id: :witness_has_smartphone %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :phone, id: :witness_phone %>
+      </div>
+
+      <div class="field">
+        <%= form.text_field :email, id: :witness_email %>
+      </div>
+
+      <div class="field">
+        <%= form.check_box :foreing, id: :witness_foreing %>
+      </div>
+
+      <div class="field">
+        <%= form.select :department_id, options_for_select(Department.all.map{|s|[s.name, s.id]}), { include_blank: true }, {id: :witness_department_id} %>
+      </div>
+
+      <div class="field">
+        <%= form.select :municipality_id, {}, { include_blank: true }, {id: :witness_municipality_id} %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Registrarme", class: "button expanded"  %>
+      </div>
+    <% end %>
+  </div>
+</div>

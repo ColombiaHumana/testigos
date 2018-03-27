@@ -13,6 +13,9 @@ en:
         department_id: Departamento
         municipality_id: Municipio
         foreing: En el extranjero?
+        zone_id: Zona
+        post_id: Puesto
+        table: Mesa
     create: Realizar donación
     errors:
       template:

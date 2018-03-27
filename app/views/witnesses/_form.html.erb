@@ -57,6 +57,18 @@
         <%= form.select :municipality_id, {}, { include_blank: true }, {id: :witness_municipality_id} %>
       </div>
 
+      <div class="field">
+        <%= form.select :zone_id, {}, { include_blank: true } %>
+      </div>
+
+      <div class="field">
+        <%= form.select :post_id, {}, { include_blank: true } %>
+      </div>
+
+      <div class="field">
+        <%= form.select :table, {}, { include_blank: true } %>
+      </div>
+
       <div class="actions">
         <%= form.submit "Registrarme", class: "button expanded"  %>
       </div>

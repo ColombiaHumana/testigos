@@ -19,8 +19,13 @@ gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-
+gem 'rest-client'
+# Plus integrations with:
+gem 'devise'
+gem 'draper'
+gem 'pundit'
 gem 'dotenv-rails', groups: [:development, :test]
+
 
 group :development, :test do
     gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

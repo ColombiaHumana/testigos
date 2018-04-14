@@ -1229,3 +1229,4 @@ municipalities = [
 municipalities.each do | municipality |
   Department.find_by(cod_department: municipality[:cod_department]).municipalities.create(name: municipality[:name], cod_department: municipality[:cod_department], cod_municipality: municipality[:cod_municipality])
 end
+User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

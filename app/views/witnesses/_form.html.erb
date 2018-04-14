@@ -45,30 +45,6 @@
         <%= form.text_field :email, id: :witness_email %>
       </div>
 
-      <div class="field">
-        <%= form.check_box :foreing, id: :witness_foreing %>
-      </div>
-
-      <div class="field">
-        <%= form.select :department_id, options_for_select(Department.all.map{|s|[s.name, s.id]}), { include_blank: true }, {id: :witness_department_id} %>
-      </div>
-
-      <div class="field">
-        <%= form.select :municipality_id, {}, { include_blank: true }, {id: :witness_municipality_id} %>
-      </div>
-
-      <div class="field">
-        <%= form.select :zone_id, {}, { include_blank: true } %>
-      </div>
-
-      <div class="field">
-        <%= form.select :post_id, {}, { include_blank: true } %>
-      </div>
-
-      <div class="field">
-        <%= form.select :table, {}, { include_blank: true } %>
-      </div>
-
       <div class="actions">
         <%= form.submit "Registrarme", class: "button expanded"  %>
       </div>

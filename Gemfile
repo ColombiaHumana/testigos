@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
     gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -32,6 +33,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'capistrano', "~> 3.10", require: false
   gem "capistrano-rails", "~> 1.3", require: false
+  gem 'capistrano-passenger', '>= 0.1.1'
+  gem 'capistrano-rvm'
 end
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

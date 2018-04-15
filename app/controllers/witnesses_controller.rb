@@ -28,6 +28,7 @@ class WitnessesController < ApplicationController
 
     respond_to do |format|
       if @witness.save
+        WitnessMailer.new_witness(@witness).deliver_later
         format.html { redirect_to root_path, notice: 'Witness was successfully created.' }
       else
         format.html { render :new }

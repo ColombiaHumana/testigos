@@ -24,7 +24,7 @@ class Witness < ApplicationRecord
     begin
       request = RestClient.post(url, data.to_json, {content_type: :json, accept: :json})
       json = JSON.parse(request)
-      if json["exito"] == true
+      if json["exito"]
         if json["data"]["lugarVotacion"]
           vote_post = json["data"]["lugarVotacion"]
           self.departamento = vote_post["departamento"]
@@ -36,20 +36,13 @@ class Witness < ApplicationRecord
         elsif json["data"]["novedades"]
           self.errors.add(:doc_number, json["data"]["novedades"]["nombreNovedad"])
           false
+        elsif json["exito"] == false
+          self.errors.add(:doc_number, json["mensaje"].gsub(/<\/?[^>]*>/, ""))
+          false
         end
-      elsif json["exito"] == false
-        self.errors.add(:doc_number, json["mensaje"].gsub(/<\/?[^>]*>/, ""))
-        false
       end
     rescue
       true
-    end
-  end
-end
-class EmailValidator < ActiveModel::EachValidator
-  def validate_each(record, attribute, value)
-    unless value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
-      record.errors[attribute] << (options[:message] || "is not an email")
     end
   end
 end

@@ -2,9 +2,9 @@ class Witness < ApplicationRecord
   validates_presence_of :doc_number, :first_name, :surname #, :departamento, :municipio, :puesto, :mesa #:municipality, :department
   # belongs_to :department
   # belongs_to :municipality
-  validates :email, presence: true, email: true
-  validates :phone, presence: true, numericality: { only_integer: true }
-  validate :add_registraduria
+  validates :email, presence: true, email: true, length: { maximum: 25 }
+  validates :phone, presence: true, numericality: { only_integer: true }, length: { in: 10..20}
+  #validate :add_registraduria
   validates_uniqueness_of :doc_number, :phone, :email
 
 

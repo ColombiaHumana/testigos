@@ -25,6 +25,7 @@ gem 'devise'
 gem 'draper'
 gem 'pundit'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'whenever', :require => false
 
 
 group :development, :test do

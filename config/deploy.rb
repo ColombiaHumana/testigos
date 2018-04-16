@@ -11,6 +11,4 @@ set :rvm_ruby_version, '2.5.0'
 set :passenger_restart_with_touch, true
 set :env_file, '.env'
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
-set :whenever_command, 'bundle exec whenever'
 set :path, ENV['PWD']
-set :output, "#{path}/log/cron.log"

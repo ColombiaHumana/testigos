@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180413203859) do
+ActiveRecord::Schema.define(version: 20180417232411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,12 @@ ActiveRecord::Schema.define(version: 20180413203859) do
     t.integer "tables"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "mens"
+    t.integer "womens"
+    t.string "address"
+    t.integer "cod_post"
+    t.index ["cod_post"], name: "index_posts_on_cod_post"
+    t.index ["name"], name: "index_posts_on_name"
     t.index ["tables"], name: "index_posts_on_tables"
     t.index ["zone_id"], name: "index_posts_on_zone_id"
   end
@@ -98,6 +104,7 @@ ActiveRecord::Schema.define(version: 20180413203859) do
     t.string "puesto"
     t.string "mesa"
     t.string "zona"
+    t.boolean "outside_witness"
     t.index ["department_id"], name: "index_witnesses_on_department_id"
     t.index ["municipality_id"], name: "index_witnesses_on_municipality_id"
     t.index ["post_id"], name: "index_witnesses_on_post_id"
@@ -109,6 +116,8 @@ ActiveRecord::Schema.define(version: 20180413203859) do
     t.bigint "municipality_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "cod_zone"
+    t.index ["cod_zone"], name: "index_zones_on_cod_zone"
     t.index ["municipality_id"], name: "index_zones_on_municipality_id"
   end
 

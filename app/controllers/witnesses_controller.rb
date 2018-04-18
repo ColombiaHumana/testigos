@@ -64,6 +64,18 @@ class WitnessesController < ApplicationController
     @municipalities = Department.find(params[:department_id]).municipalities
   end
 
+  def get_zone
+    @zones = Municipality.find(params[:municipality_id]).zones
+  end
+
+  def get_post
+    @posts = Zone.find(params[:zone_id]).posts
+  end
+
+  def get_table
+    @tables = Post.find(params[:post_id]).tables
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_witness
@@ -72,6 +84,6 @@ class WitnessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def witness_params
-      params.require(:witness).permit(:doc_number, :first_name, :second_name, :surname, :second_surname, :has_smartphone, :phone, :email, :foreing, :department_id, :municipality_id)
+      params.require(:witness).permit(:doc_number, :first_name, :second_name, :surname, :second_surname, :has_smartphone, :phone, :email, :foreing, :department_id, :municipality_id, :outside_witness, :zone_id, :post_id, :table)
     end
 end

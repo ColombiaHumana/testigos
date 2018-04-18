@@ -6,12 +6,13 @@ es:
     attributes:
       witness:
         doc_number: Número de CC
-        first_name: Primero Nombre
+        first_name: Primer Nombre
         second_name: Segundo Nombre
         surname: Primer Apellido
         second_surname: Segundo Apellido
         has_smartphone: Posee teléfono inteligente?
         phone: Teléfono
+        outside_witness: Testigo de un puesto distinto al que vota?
         department_id: Departamento
         municipality_id: Municipio
         foreing: En el extranjero?

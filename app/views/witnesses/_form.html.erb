@@ -45,6 +45,31 @@
         <%= form.email_field :email, id: :witness_email %>
       </div>
 
+      <div class="field">
+        <%= form.check_box :outside_witness, id: :witness_outside_witness %>
+      </div>
+
+      <div class="extra-data" style="display:none;">
+        <div class="field">
+          <%= form.select :department_id, options_for_select(Department.all.map{|s|[s.name, s.id]}), { include_blank: true }, {id: :witness_department_id} %>
+        </div>
+
+        <div class="field">
+          <%= form.select :municipality_id, {}, { include_blank: true }, {id: :witness_municipality_id} %>
+        </div>
+
+        <div class="field">
+          <%= form.select :zone_id, {}, { include_blank: true }, {id: :witness_zone_id} %>
+        </div>
+
+        <div class="field">
+          <%= form.select :post_id, {}, { include_blank: true }, {id: :witness_post_id} %>
+        </div>
+
+        <div class="field">
+          <%= form.select :table, {}, { include_blank: true }, {id: :witness_table_id} %>
+        </div>
+      </div>
       <div class="actions">
         <%= form.submit "Registrarme", class: "button expanded"  %>
       </div>

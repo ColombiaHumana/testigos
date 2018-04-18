@@ -22,9 +22,3 @@ $(document).ready ->
     $.get url, (data) ->
       $.each data, (key, value) ->
         $("#witness_post_id").append('<option value=' + value['id'] + '>' + value['name'] + '</option>')
-  $('#witness_post_id').on "change", ->
-    url = '/get_table/' + $(this).val() + '.json'
-    $("#witness_table_id").find('option').not(':first').remove()
-    $.get url, (data) ->
-      $.each data, (key, value) ->
-        $("#witness_table_id").append('<option value=' + value['id'] + '>' + value['name'] + '</option>')

@@ -1,3 +1,4 @@
+require 'csv'
 namespace :divipol do
   desc "Load DIVIPOL CSV"
   task :load do

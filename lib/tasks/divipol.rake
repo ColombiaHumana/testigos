@@ -1,7 +1,7 @@
 require 'csv'
 namespace :divipol do
   desc "Load DIVIPOL CSV"
-  task :load do
+  task load: :environment do
     divipol_csv = File.read(Rails.root.join('vendor','divipol','divipol.csv'))
     csv = CSV.parse(divipol_csv, headers: true)
     csv.each do |centro|

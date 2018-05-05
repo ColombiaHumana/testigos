@@ -2,8 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
-  $('#witness_outside_witness').on "change", ->
-    $('.extra-data').toggle()
+  # $('#witness_outside_witness').on "change", ->
+  #   $('.extra-data').toggle()
   $('#witness_department_id').on "change", ->
     url = '/get_municipality/' + $(this).val() + '.json'
     $("#witness_municipality_id").find('option').not(':first').remove()

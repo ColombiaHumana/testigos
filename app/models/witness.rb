@@ -14,11 +14,9 @@ class Witness < ApplicationRecord
   private
 
   def outside_witness
-    if self.outside_witness?
-      errors.add(:department_id, "no puede estar vacío") unless !self.department.nil?
-      errors.add(:municipality_id, "no puede estar vacío") unless !self.municipality.nil?
-      errors.add(:zone_id, "no puede estar vacío") unless !self.zone.nil?
-      errors.add(:post_id, "no puede estar vacío") unless !self.post.nil?
-    end
+    errors.add(:department_id, "no puede estar vacío") if self.department.nil?
+    errors.add(:municipality_id, "no puede estar vacío") if self.municipality.nil?
+    errors.add(:zone_id, "no puede estar vacío") if self.zone.nil?
+    errors.add(:post_id, "no puede estar vacío") if self.post.nil?
   end
 end

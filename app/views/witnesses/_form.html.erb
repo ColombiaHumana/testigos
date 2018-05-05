@@ -49,7 +49,7 @@
         <%= form.check_box :outside_witness, id: :witness_outside_witness %>
       </div>
 
-      <div class="extra-data" style="display:none;">
+      <div class="extra-data">
         <div class="field">
           <%= form.select :department_id, options_for_select(Department.all.map{|s|[s.name, s.id]}), { include_blank: true }, {id: :witness_department_id} %>
         </div>

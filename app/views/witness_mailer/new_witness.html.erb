@@ -1483,10 +1483,10 @@ body.outlook p {
                                   <p>Estás a un paso de convertirte en testigo electoral en la jornada del próximo 27 de mayo. Para completar tu inscripción solo debes comprobar que tus datos están correctos y responder este correo a <a href="mailto:testigos@petro.com.co">testigos@petro.com.co</a> con <b>TU NÚMERO DE CÉDULA</b> en el <b>ASUNTO</b> tal como se muestra en el siguiente ejemplo:</p>
                                   <img src="https://petro.com.co/wp-content/uploads/2018/05/ejemplo_mail.png"/>
                                   <div class="lugar">
-                                    <span>Cédula: <b>CEDULA</b></span>
-                                    <span>Departamento: <b>DEPARTAMENTO</b></span>
-                                    <span>Ciudad / Municipio: <b>MUNICIPIO</b></span>
-                                    <span>Puesto de votación: <b>PUESTO</b></span>
+                                    <span>Cédula: <b><%= @witness.doc_number %></b></span>
+                                    <span>Departamento: <b><%= @witness.department.name %></b></span>
+                                    <span>Ciudad / Municipio: <b><%= @witness.municipality.name %></b></span>
+                                    <span>Puesto de votación: <b><%= @witness.post.name %></b></span>
                                   </div>
                                   <p>Ten presente las siguientes recomendaciones para ser Testigo Electoral:</p>
                                   <ol>

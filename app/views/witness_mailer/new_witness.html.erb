@@ -328,13 +328,13 @@
                                   <th class="cuerpo" style="Margin: 0; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
                                     <h4 class="titulo" style="Margin: 0; Margin-bottom: 10px; color: inherit; font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-weight: bold; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; word-wrap: normal;">Hola, <%= "#{@witness.first_name.titleize} #{@witness.surname.titleize}" %></h4>
                                     <p style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">Estás a un paso de convertirte en testigo electoral en la jornada del próximo 27 de mayo. Para completar tu inscripción solo debes comprobar que tus datos están correctos y responder este correo a <a href="mailto:testigos@petro.com.co?subject=Confirmo%20CC%20<%= @witness.doc_number %>&body=Confirmo%20mi%20participaci%C3%B3n%20como%20testigo%20electoral%20CC%20<%= @witness.doc_number %>"
-                                        style="Margin: 0; color: #2199e8; font-family: Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">testigos@petro.com.co</a> con <b>TU NÚMERO DE CÉDULA</b> en el <b>ASUNTO</b> tal como se muestra en el siguiente ejemplo:</p>
+                                        style="//text-decoration:underline dotted #622066;Margin:0;background:#622066;color:#fff!important;font-family:Helvetica,Arial,sans-serif;font-weight:600;line-height:1.3;margin:0;padding:3px 8px;text-align:left;text-decoration:none">testigos@petro.com.co</a> con <b>TU NÚMERO DE CÉDULA</b> en el <b>ASUNTO</b> tal como se muestra en el siguiente ejemplo:</p>
                                     <img src="https://petro.com.co/wp-content/uploads/2018/05/ejemplo_mail.png" style="-ms-interpolation-mode: bicubic; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: auto;">
                                     <div class="lugar">
-                                      <span>Cédula: <b><%= @witness.doc_number %></b></span>
-                                      <span>Departamento: <b><%= @witness.department.name %></b></span>
-                                      <span>Ciudad / Municipio: <b><%= @witness.municipality.name %></b></span>
-                                      <span>Puesto de votación: <b><%= @witness.post.name %></b></span>
+                                      <span style="display:block">Cédula: <b><%= @witness.doc_number %></b></span>
+                                      <span style="display:block">Departamento: <b><%= @witness.department.name %></b></span>
+                                      <span style="display:block">Ciudad / Municipio: <b><%= @witness.municipality.name %></b></span>
+                                      <span style="display:block">Puesto de votación: <b><%= @witness.post.name %></b></span>
                                     </div>
                                     <p style="Margin: 0; Margin-bottom: 10px; color: #0a0a0a; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">Ten presente las siguientes recomendaciones para ser Testigo Electoral:</p>
                                     <ol>

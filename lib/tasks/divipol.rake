@@ -17,19 +17,18 @@ namespace :divipol do
     data_csv = File.read(Rails.root.join('vendor', 'divipol', 'data.csv'))
     csv = CSV.parse(data_csv, headers: true)
     csv.each do |witness|
-      user = Witness.find_by(doc_number: witness['cedula'])
-      puts witness.inspect
-      unless user.nil? do
-        user.attributes(
-           checked: true,
-           divipol: witness['divipol'],
-           departamento: witness['departamento'],
-           municipio: witness['municipio'],
-           puesto: witness['puesto'],
-           mesa: witness['mesa']
-          )
-        user.save(validate: false)
-        end
+      witness_data = Witness.find_by(doc_number: witness['cedula'])
+      puts witness_data
+      if witness_data
+        witness_data.assign_attributes(
+          checked: true,
+          divipol: witness['divipol'],
+          departamento: witness['departamento'],
+          municipio: witness['municipio'],
+          puesto: witness['puesto'],
+          mesa: witness['mesa']
+        )
+        witness_data.save!(validate: false)
       end
     end
   end

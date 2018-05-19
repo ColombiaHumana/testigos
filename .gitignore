@@ -16,3 +16,4 @@
 .env
 .byebug_history
 /public/assets
+/vendor/divipol/data.csv

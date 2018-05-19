@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417232411) do
+ActiveRecord::Schema.define(version: 20180519224020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,7 +105,11 @@ ActiveRecord::Schema.define(version: 20180417232411) do
     t.string "mesa"
     t.string "zona"
     t.boolean "outside_witness"
+    t.string "divipol"
+    t.boolean "checked"
+    t.boolean "verified"
     t.index ["department_id"], name: "index_witnesses_on_department_id"
+    t.index ["divipol"], name: "index_witnesses_on_divipol"
     t.index ["municipality_id"], name: "index_witnesses_on_municipality_id"
     t.index ["post_id"], name: "index_witnesses_on_post_id"
     t.index ["zone_id"], name: "index_witnesses_on_zone_id"

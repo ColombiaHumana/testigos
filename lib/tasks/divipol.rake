@@ -17,9 +17,9 @@ namespace :divipol do
     data_csv = File.read(Rails.root.join('vendor', 'divipol', 'data.csv'))
     csv = CSV.parse(data_csv, headers: true)
     csv.each do |witness|
-      user = Witness.find_by doc_number: witness['cedula']
+      user = Witness.find_by(doc_number: witness['cedula'])
       puts witness.inspect
-      if user do
+      unless user.nil? do
         user.attributes(
            checked: true,
            divipol: witness['divipol'],

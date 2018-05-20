@@ -36,5 +36,6 @@ ActiveAdmin.register Witness do
     column :mesa
     column :has_smartphone
     column :foreing
+    column :created_at
   end
 end
